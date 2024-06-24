@@ -1,0 +1,36 @@
+@layer tailwind-base, primereact, tailwind-utilities;
+
+/* IMPORTANT: In "styled" mode you must add the PrimeReact Theme here. Do NOT include in "unstyled" mode */
+@import 'primereact/resources/themes/lara-light-blue/theme.css' layer(primereact);
+
+@layer tailwind-base {
+  @tailwind base;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+
+  }
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .active {
+    @apply flex items-center gap-1 py-2.5 px-4 rounded transition duration-200 hover:bg-green-400 active:bg-gray-800 bg-green-500
+  }
+
+  .nav-link {
+    @apply flex items-center gap-1 py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 active:bg-gray-800
+  }
+}
+
+
